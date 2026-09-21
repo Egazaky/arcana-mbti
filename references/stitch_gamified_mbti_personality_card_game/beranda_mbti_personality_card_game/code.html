@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#d7cdb8", "on-tertiary-fixed": "#201b0e", "surface-container": "#211f1e", "surface-dim": "#141312", "on-primary": "#3c2f00", "secondary-fixed-dim": "#cac6c4", "surface-tint": "#e9c349", "on-surface-variant": "#d0c5af", "secondary-container": "#4d4b4a", "primary": "#f2ca50", "tertiary-fixed": "#ece2cc", "secondary-fixed": "#e6e2df", "surface-variant": "#363433", "inverse-primary": "#735c00", "on-secondary-container": "#bfbbb9", "on-tertiary-fixed-variant": "#4c4636", "on-primary-container": "#554300", "primary-fixed-dim": "#e9c349", "on-error": "#690005", "on-secondary-fixed-variant": "#484645", "on-secondary": "#31302f", "surface-container-lowest": "#0f0e0d", "background": "#141312", "on-primary-fixed-variant": "#574500", "surface-bright": "#3b3937", "inverse-surface": "#e6e1df", "on-background": "#e6e1df", "tertiary-container": "#bbb29d", "error": "#ffb4ab", "outline": "#99907c", "error-container": "#93000a", "surface-container-highest": "#363433", "outline-variant": "#4d4635", "on-error-container": "#ffdad6", "tertiary-fixed-dim": "#cfc6b0", "surface-container-high": "#2b2a28", "surface-container-low": "#1d1b1a", "inverse-on-surface": "#32302f", "on-primary-fixed": "#241a00", "secondary": "#cac6c4", "on-tertiary-container": "#4a4534", "primary-fixed": "#ffe088", "on-surface": "#e6e1df", "on-tertiary": "#353021", "on-secondary-fixed": "#1c1b1a", "surface": "#141312", "primary-container": "#d4af37" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-tablet": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "margin-desktop": "2.5rem", "margin": "1rem" }, "fontFamily": { "label-md": ["Manrope"], "body-md": ["Manrope"], "headline-sm": ["Libre Caslon Text"], "display-hero-mobile": ["Libre Caslon Text"], "body-lg": ["Manrope"], "display-hero": ["Libre Caslon Text"], "label-lg": ["Manrope"], "label-archetype": ["Manrope"], "headline-md": ["Libre Caslon Text"], "headline-lg": ["Libre Caslon Text"], "body-sm": ["Manrope"], "headline-lg-mobile": ["Libre Caslon Text"], "title-card": ["Libre Caslon Text"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0.03em", "fontWeight": "500" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-archetype": ["11px", { "lineHeight": "14px", "letterSpacing": "0.15em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600" }], "title-card": ["16px", { "lineHeight": "22px", "letterSpacing": "0.12em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col relative"><div class="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-surface-dim/40 to-surface-container-lowest -z-10"></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.6)]"><div class="h-16 w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group text-left" data-path="beranda" href="#"><div class="w-7 h-9 rounded bg-surface-container-high flex items-center justify-center shadow-[0_0_8px_rgba(242,202,80,0.25)] transition-transform group-hover:scale-105"><span class="material-symbols-outlined text-primary text-[18px]">style</span></div><div class="flex flex-col"><span class="font-title-card text-title-card text-primary tracking-widest uppercase">Arcana MBTI</span><span class="font-label-archetype text-label-archetype text-on-surface-variant tracking-widest">ORACLE DECK</span></div></a><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded shadow-[0_0_12px_rgba(212,175,55,0.3)]"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-bold rounded shadow-[0_0_12px_rgba(212,175,55,0.3)]" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded" data-path="perjalanan-level" href="#">Perjalanan Level</a><a class="relative px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded flex items-center gap-space-xs" data-path="kartu-saya" href="#"><span>Kartu Saya</span><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all rounded" data-path="koleksi-kartu-(16-tipe)" href="#">Koleksi Kartu (16 Tipe)</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 rounded shadow-inner"><span class="material-symbols-outlined text-primary text-[16px]">auto_awesome</span><span class="font-label-archetype text-label-archetype text-tertiary tracking-wider">ORACLE LV. 4</span><span class="font-label-archetype text-label-archetype text-on-surface-variant">| 7/16 UNLOCKED</span></div><button aria-label="Beralih Suara" class="w-9 h-9 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_10px_rgba(242,202,80,0.3)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section with Occult Tabletop Aura -->
+<section class="relative w-full overflow-hidden pt-12 pb-24 px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Ambient gold halo background -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[360px] bg-primary/10 blur-[130px] rounded-full pointer-events-none -z-10"></div>
+<div class="absolute -top-12 -left-20 w-80 h-80 bg-primary-container/10 blur-[90px] rounded-full pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Column: Editorial & CTA -->
+<div class="lg:col-span-6 flex flex-col items-start text-left z-10">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high text-primary mb-space-md shadow-inner">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-archetype text-label-archetype uppercase tracking-widest text-primary-fixed">ORACLE ARCANA 16 ARKETIPE</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight mb-space-md">
+          Kenali Dirimu.<br/>
+<span class="text-primary italic font-headline-lg font-normal">Temukan Kartu Kepribadianmu.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-xl mb-space-xl leading-relaxed">
+          Ungkap cetak biru jiwamu melalui ritual pembacaan 4 dimensi okultis. Raih arketipe tarot eksklusifmu, kumpulkan 16 kartu persona, dan tembus gerbang takdir kepribadian.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md w-full sm:w-auto">
+<a class="group relative inline-flex items-center justify-center gap-space-sm px-space-xl py-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg transition-all duration-300 shadow-[0_0_24px_rgba(212,175,55,0.4)] hover:shadow-[0_0_34px_rgba(242,202,80,0.65)] hover:scale-105 active:scale-95" data-path="perjalanan-level" href="#">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Mulai Tes Sekarang</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-all duration-300 hover:bg-surface-bright" href="#featured-cards">
+<span class="material-symbols-outlined text-[18px]">view_carousel</span>
+<span class="font-label-lg text-label-lg">Jelajahi 16 Kartu</span>
+</a>
+</div>
+<!-- Meta stat ticker -->
+<div class="grid grid-cols-3 gap-space-lg pt-space-xl mt-space-lg w-full max-w-md">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-primary">16</span>
+<span class="font-label-archetype text-label-archetype text-outline uppercase tracking-wider">Kartu Persona</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">4 Lv.</span>
+<span class="font-label-archetype text-label-archetype text-outline uppercase tracking-wider">Ritual Ujian</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-tertiary-fixed">98.4%</span>
+<span class="font-label-archetype text-label-archetype text-outline uppercase tracking-wider">Akurasi Refleksi</span>
+</div>
+</div>
+</div>
+<!-- Right Column: 3D Interactive Card Fan Preview -->
+<div class="lg:col-span-6 relative flex items-center justify-center min-h-[460px] pt-8 lg:pt-0">
+<div class="relative w-full max-w-[480px] h-[440px] flex items-center justify-center select-none perspective-[1000px]" id="deck-fanner">
+<!-- Obsidian Card 1 (Left tilt - INTJ) -->
+<div class="absolute w-56 h-80 rounded-xl bg-surface-container-lowest p-2 shadow-[0_16px_35px_rgba(0,0,0,0.85)] -rotate-12 -translate-x-20 translate-y-4 hover:translate-y-0 hover:-rotate-6 transition-all duration-500 cursor-pointer group">
+<div class="relative w-full h-full bg-surface-container-low rounded-lg p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="absolute inset-1 pointer-events-none opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
+<!-- Filigree ornate card border simulation -->
+<div class="flex justify-between items-center text-primary/80">
+<span class="font-label-archetype text-label-archetype">№ I</span>
+<span class="font-title-card text-title-card uppercase tracking-widest text-primary">MBTI</span>
+<span class="material-symbols-outlined text-[14px]">token</span>
+</div>
+<div class="flex-1 my-2 bg-surface-container-lowest rounded flex flex-col items-center justify-center relative p-3 overflow-hidden">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[36px]">architecture</span>
+</div>
+<span class="font-label-archetype text-label-archetype text-tertiary-fixed tracking-widest uppercase">THE ARCHITECT</span>
+</div>
+<div class="flex justify-between items-center text-primary font-title-card text-title-card pt-1">
+<span>INTJ</span>
+<span class="text-on-surface-variant font-label-archetype text-label-archetype">ANALIS</span>
+</div>
+</div>
+</div>
+<!-- Parchment Card 2 (Center Hero - INFP The Dreamer) -->
+<div class="absolute w-60 h-84 rounded-xl bg-[#EFE7D4] text-[#1c1b1a] p-2.5 shadow-[0_25px_50px_rgba(0,0,0,0.9),0_0_20px_rgba(212,175,55,0.3)] z-20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+<div class="w-full h-full bg-[#E5DBC4] rounded-lg p-3.5 flex flex-col justify-between shadow-inner">
+<div class="flex justify-between items-center text-[#54451D]">
+<span class="font-label-archetype text-label-archetype">№ IX</span>
+<span class="font-title-card text-title-card tracking-widest font-bold">MBTI</span>
+<span class="material-symbols-outlined text-[16px] text-[#8A7120]">spa</span>
+</div>
+<div class="flex-1 my-2 bg-[#FAF5E9] rounded flex flex-col items-center justify-center p-3 text-center">
+<div class="w-24 h-24 rounded-full bg-primary-container/20 flex items-center justify-center mb-2 group-hover:rotate-6 transition-transform">
+<span class="material-symbols-outlined text-[#54451D] text-[42px]">psychology_alt</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-[#2b2a28] font-bold">Mediator</span>
+<span class="font-label-archetype text-label-archetype text-[#735c00] tracking-widest uppercase">Idealist Puitis</span>
+</div>
+<div class="flex justify-between items-center text-[#2b2a28] font-title-card text-title-card pt-1">
+<span class="font-bold">INFP</span>
+<span class="font-label-archetype text-label-archetype text-[#54451D]">DIPLOMAT</span>
+</div>
+</div>
+</div>
+<!-- Obsidian Card 3 (Right tilt - ENFP The Campaigner) -->
+<div class="absolute w-56 h-80 rounded-xl bg-surface-container-lowest p-2 shadow-[0_16px_35px_rgba(0,0,0,0.85)] rotate-12 translate-x-20 translate-y-4 hover:translate-y-0 hover:rotate-6 transition-all duration-500 cursor-pointer group">
+<div class="relative w-full h-full bg-surface-container-low rounded-lg p-3 flex flex-col justify-between overflow-hidden shadow-inner">
+<div class="flex justify-between items-center text-primary/80">
+<span class="font-label-archetype text-label-archetype">№ VII</span>
+<span class="font-title-card text-title-card uppercase tracking-widest text-primary">MBTI</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</div>
+<div class="flex-1 my-2 bg-surface-container-lowest rounded flex flex-col items-center justify-center relative p-3 overflow-hidden">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[36px]">campaign</span>
+</div>
+<span class="font-label-archetype text-label-archetype text-tertiary-fixed tracking-widest uppercase">THE CAMPAIGNER</span>
+</div>
+<div class="flex justify-between items-center text-primary font-title-card text-title-card pt-1">
+<span>ENFP</span>
+<span class="text-on-surface-variant font-label-archetype text-label-archetype">DIPLOMAT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mystical 4 Dimensions (Apa itu MBTI?) -->
+<section class="w-full bg-surface-container-lowest py-20 px-margin md:px-margin-tablet lg:px-margin-desktop relative">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col max-w-2xl">
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest mb-1">KOMPAS PSIKOLOGIS OCCULT</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Empat Gerbang Arketipe Jiwa</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Bukan sekadar rumus kaku, tipologi MBTI adalah diagram 4 kutub komplementer yang membentuk spektrum insting, persepsi, dan cara Anda memengaruhi realitas.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary font-label-archetype text-label-archetype">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>KLIK ATAU SENTUH KUTUB UNTUK DETAIL</span>
+</div>
+</div>
+<!-- 4 Dials / Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Axis 1: Energy -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high group shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-archetype text-label-archetype text-primary tracking-wider uppercase">DIMENSI I • ENERGI</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">explore</span>
+</div>
+<div class="space-y-space-md my-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Extraversion (E)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Luar</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Mengisi energi dari interaksi dinamis dan dunia eksternal.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Introversion (I)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Dalam</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Mengisi energi melalui refleksi hening dan kontemplasi batin.</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-primary h-full w-1/2"></div>
+</div>
+</div>
+<!-- Axis 2: Perception -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high group shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-archetype text-label-archetype text-primary tracking-wider uppercase">DIMENSI II • INFORMASI</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">visibility</span>
+</div>
+<div class="space-y-space-md my-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Sensing (S)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Faktawi</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Mencerap realitas melalui fakta empiris, rincian, dan kenyataan.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Intuition (N)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Pola</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Menangkap gambaran besar, simbol, koneksi gaib, dan potensi masa depan.</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+</div>
+<!-- Axis 3: Decisions -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high group shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-archetype text-label-archetype text-primary tracking-wider uppercase">DIMENSI III • KEPUTUSAN</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">balance</span>
+</div>
+<div class="space-y-space-md my-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Thinking (T)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Logika</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Menilai menggunakan analisis objektif, konsistensi rasional, dan fakta.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Feeling (F)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Nilai</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Memutuskan berbasis harmoni antarsesama, empati, dan nilai terdalam.</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-primary h-full w-2/5"></div>
+</div>
+</div>
+<!-- Axis 4: Lifestyle -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high group shadow-lg">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-archetype text-label-archetype text-primary tracking-wider uppercase">DIMENSI IV • STRUKTUR</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">hourglass_top</span>
+</div>
+<div class="space-y-space-md my-space-sm">
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Judging (J)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Tertib</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Menghargai rencana tuntas, kepastian jadwal, dan batas ketat.</p>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low hover:bg-primary-container/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-title-card text-title-card text-primary font-bold">Perceiving (P)</span>
+<span class="font-label-archetype text-label-archetype text-on-surface-variant">Fleksibel</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-1">Menikmati spontanitas, adaptasi bebas, dan opsi yang terus terbuka.</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-primary h-full w-4/5"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Cards Gallery (Tarot Showcase Direct from inspiration image) -->
+<section class="w-full py-24 px-margin md:px-margin-tablet lg:px-margin-desktop relative" id="featured-cards">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest">Koleksi Terpilih</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Galeri Arketipe Tarot Occult</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+            Setiap kartu dicetak dalam format dualitas: obsidian malam kelam atau perkamen emas siang hari, dilengkapi lambang karsa arketipe.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-archetype text-label-archetype text-tertiary uppercase">Filter:</span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-primary font-label-archetype text-label-archetype">Semua (16)</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant font-label-archetype text-label-archetype hover:text-primary cursor-pointer">Analis</span>
+<span class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant font-label-archetype text-label-archetype hover:text-primary cursor-pointer">Diplomat</span>
+</div>
+</div>
+<!-- Grid of 6 Distinct Featured Tarot Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- CARD 1: INTJ (Obsidian Variant) -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(0,0,0,0.85)] flex flex-col justify-between">
+<div class="w-full h-full bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-archetype text-label-archetype">№ 01</span>
+<span class="font-title-card text-title-card tracking-widest uppercase">MBTI</span>
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<!-- Card Art Portrait Centerpiece -->
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-surface-container-lowest rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[48px]">architecture</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Architect</h3>
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest">Mastermind Strategis</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary text-center max-w-[200px] line-clamp-2">
+                Pemikir imajinatif sekaligus berorientasi rencana taktis tanpa cela.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-md text-headline-md text-primary font-bold">INTJ</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-archetype text-label-archetype text-tertiary-fixed">ANALIS</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: INTP (Light Vellum / Parchment Variant) -->
+<div class="group relative rounded-xl bg-[#EFE7D4] text-[#1c1b1a] p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(212,175,55,0.2)] flex flex-col justify-between">
+<div class="w-full h-full bg-[#E5DBC4] rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-[#54451D]">
+<span class="font-label-archetype text-label-archetype">№ 02</span>
+<span class="font-title-card text-title-card tracking-widest font-bold">MBTI</span>
+<span class="material-symbols-outlined text-[18px] text-[#735c00]">science</span>
+</div>
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-[#FAF5E9] rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/25 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#54451D] text-[48px]">biotech</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-[#1c1b1a] font-bold">The Logician</h3>
+<span class="font-label-archetype text-label-archetype text-[#735c00] uppercase tracking-widest">Peneliti Eksentrik</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4d4635] text-center max-w-[200px] line-clamp-2">
+                Pencipta inovatif dengan dahaga tak pernah padam akan ilmu pengetahuan.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-[#1c1b1a]">
+<span class="font-headline-md text-headline-md font-bold">INTP</span>
+<span class="px-space-xs py-0.5 rounded bg-[#FAF5E9] font-label-archetype text-label-archetype text-[#54451D]">ANALIS</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: ENTJ (Obsidian Variant) -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(0,0,0,0.85)] flex flex-col justify-between">
+<div class="w-full h-full bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-archetype text-label-archetype">№ 03</span>
+<span class="font-title-card text-title-card tracking-widest uppercase">MBTI</span>
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-surface-container-lowest rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[48px]">crown</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Commander</h3>
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest">Pemimpin Berani</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary text-center max-w-[200px] line-clamp-2">
+                Penggerak tegas berkemauan baja yang selalu menemukan jalan keluar.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-md text-headline-md text-primary font-bold">ENTJ</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-archetype text-label-archetype text-tertiary-fixed">ANALIS</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: INFJ (Light Vellum / Parchment Variant) -->
+<div class="group relative rounded-xl bg-[#EFE7D4] text-[#1c1b1a] p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(212,175,55,0.2)] flex flex-col justify-between">
+<div class="w-full h-full bg-[#E5DBC4] rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-[#54451D]">
+<span class="font-label-archetype text-label-archetype">№ 05</span>
+<span class="font-title-card text-title-card tracking-widest font-bold">MBTI</span>
+<span class="material-symbols-outlined text-[18px] text-[#735c00]">menu_book</span>
+</div>
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-[#FAF5E9] rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/25 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#54451D] text-[48px]">auto_stories</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-[#1c1b1a] font-bold">The Advocate</h3>
+<span class="font-label-archetype text-label-archetype text-[#735c00] uppercase tracking-widest">Penjaga Hikmah</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4d4635] text-center max-w-[200px] line-clamp-2">
+                Mistikus tenang dan penuh integritas yang mengilhami perubahan humanis.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-[#1c1b1a]">
+<span class="font-headline-md text-headline-md font-bold">INFJ</span>
+<span class="px-space-xs py-0.5 rounded bg-[#FAF5E9] font-label-archetype text-label-archetype text-[#54451D]">DIPLOMAT</span>
+</div>
+</div>
+</div>
+<!-- CARD 5: ENFP (Obsidian Variant) -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(0,0,0,0.85)] flex flex-col justify-between">
+<div class="w-full h-full bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-label-archetype text-label-archetype">№ 07</span>
+<span class="font-title-card text-title-card tracking-widest uppercase">MBTI</span>
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-surface-container-lowest rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[48px]">celebration</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">The Campaigner</h3>
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest">Jiwa Merdeka</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary text-center max-w-[200px] line-clamp-2">
+                Jiwa bebas yang ramah dan energetik, selalu melihat alasan untuk tersenyum.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-md text-headline-md text-primary font-bold">ENFP</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-archetype text-label-archetype text-tertiary-fixed">DIPLOMAT</span>
+</div>
+</div>
+</div>
+<!-- CARD 6: ENFJ (Light Vellum / Parchment Variant) -->
+<div class="group relative rounded-xl bg-[#EFE7D4] text-[#1c1b1a] p-3 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_35px_rgba(212,175,55,0.2)] flex flex-col justify-between">
+<div class="w-full h-full bg-[#E5DBC4] rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-[#54451D]">
+<span class="font-label-archetype text-label-archetype">№ 08</span>
+<span class="font-title-card text-title-card tracking-widest font-bold">MBTI</span>
+<span class="material-symbols-outlined text-[18px] text-[#735c00]">shield</span>
+</div>
+<div class="my-space-md py- space-y-2 flex flex-col items-center justify-center bg-[#FAF5E9] rounded-md p-space-md relative overflow-hidden">
+<div class="w-24 h-24 rounded-full bg-primary-container/25 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#54451D] text-[48px]">volunteer_activism</span>
+</div>
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-[#1c1b1a] font-bold">The Protagonist</h3>
+<span class="font-label-archetype text-label-archetype text-[#735c00] uppercase tracking-widest">Ksatria Karismatik</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4d4635] text-center max-w-[200px] line-clamp-2">
+                Sosok inspiratif yang mampu memikat pendengarnya demi tujuan luhur bersama.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-[#1c1b1a]">
+<span class="font-headline-md text-headline-md font-bold">ENFJ</span>
+<span class="px-space-xs py-0.5 rounded bg-[#FAF5E9] font-label-archetype text-label-archetype text-[#54451D]">DIPLOMAT</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-space-md">
+<a class="inline-flex items-center gap-space-sm px-space-xl py-3 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-label-lg text-label-lg transition-colors" data-path="koleksi-kartu-(16-tipe)" href="#">
+<span>Buka Katalog Lengkap 16 Kartu Arketipe</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Mystical 4-Level Ritual Journey Preview Banner -->
+<section class="w-full bg-surface-container-low py-20 px-margin md:px-margin-tablet lg:px-margin-desktop relative overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col items-center">
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-widest mb-1">PROSES PENEMPAAN JIWA</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Ritual 4 Tingkat Perjalanan Kartu</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Anda tidak sekadar menjawab tes trivia biasa. Anda melangkah melewati empat kuil kesadaran untuk membangkitkan kartu arketipe sejatimu.
+        </p>
+</div>
+<!-- Step Map -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop relative">
+<!-- Step 1 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col items-start relative shadow-md group hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center font-bold font-title-card text-title-card mb-space-md shadow-[0_0_12px_rgba(242,202,80,0.3)]">
+            I
+          </div>
+<h4 class="font-title-card text-title-card text-on-surface mb-1">Aura Eksternal</h4>
+<span class="font-label-archetype text-label-archetype text-primary mb-space-sm">LEVEL 1 • ENERGI</span>
+<p class="font-body-sm text-body-sm text-tertiary">
+            Menguji bagaimana Anda beresonansi dengan keramaian dunia versus keheningan interior.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col items-start relative shadow-md group hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded bg-surface-container-high text-primary flex items-center justify-center font-bold font-title-card text-title-card mb-space-md">
+            II
+          </div>
+<h4 class="font-title-card text-title-card text-on-surface mb-1">Mata Ketiga</h4>
+<span class="font-label-archetype text-label-archetype text-primary mb-space-sm">LEVEL 2 • PERSEPSI</span>
+<p class="font-body-sm text-body-sm text-tertiary">
+            Membuka cara akal Anda menyerap tanda: apakah melalui detail nyata atau penglihatan abstrak.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col items-start relative shadow-md group hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded bg-surface-container-high text-primary flex items-center justify-center font-bold font-title-card text-title-card mb-space-md">
+            III
+          </div>
+<h4 class="font-title-card text-title-card text-on-surface mb-1">Cawan Nalar</h4>
+<span class="font-label-archetype text-label-archetype text-primary mb-space-sm">LEVEL 3 • KEPUTUSAN</span>
+<p class="font-body-sm text-body-sm text-tertiary">
+            Menimbang timbangan nurani: memilih dinginnya analisa murni atau kehangatan empati relasional.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container rounded-xl p-space-lg flex flex-col items-start relative shadow-md group hover:bg-surface-container-high transition-colors">
+<div class="w-10 h-10 rounded bg-surface-container-high text-primary flex items-center justify-center font-bold font-title-card text-title-card mb-space-md">
+            IV
+          </div>
+<h4 class="font-title-card text-title-card text-on-surface mb-1">Pengukuhan Kartu</h4>
+<span class="font-label-archetype text-label-archetype text-primary mb-space-sm">LEVEL 4 • MANIFESTASI</span>
+<p class="font-body-sm text-body-sm text-tertiary">
+            Kartu arketipe tarot pribadi Anda dimaterialkan secara permanen ke dek koleksi jiwamu.
+          </p>
+</div>
+</div>
+<!-- Quick Interactive Question Demo -->
+<div class="mt-space-md p-space-xl rounded-xl bg-surface-container-lowest max-w-3xl mx-auto w-full shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-archetype text-label-archetype text-primary uppercase tracking-wider">CUPLIKAN PERTANYAAN CEPAT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lv. 1 / 4</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-normal">
+          “Setelah hari yang panjang dan melelahkan, ritual apa yang paling mengembalikan daya hidupmu?”
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-space-xs">
+<button class="p-space-md rounded bg-surface-container hover:bg-primary-container hover:text-on-primary text-left transition-all text-tertiary font-body-md text-body-md flex items-center justify-between group" type="button">
+<span>Mengobrol santai &amp; bergaul di lingkaran sosial</span>
+<span class="font-title-card text-title-card opacity-40 group-hover:opacity-100 font-bold">E</span>
+</button>
+<button class="p-space-md rounded bg-surface-container hover:bg-primary-container hover:text-on-primary text-left transition-all text-tertiary font-body-md text-body-md flex items-center justify-between group" type="button">
+<span>Menyepi di ruang tenang ditemani buku atau musik</span>
+<span class="font-title-card text-title-card opacity-40 group-hover:opacity-100 font-bold">I</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="w-full py-24 px-margin md:px-margin-tablet lg:px-margin-desktop bg-surface relative text-center">
+<div class="max-w-3xl mx-auto flex flex-col items-center gap-space-lg">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-[0_0_20px_rgba(242,202,80,0.2)]">
+<span class="material-symbols-outlined text-[32px]">style</span>
+</div>
+<div class="space-y-space-xs">
+<span class="font-label-archetype text-label-archetype text-primary tracking-widest uppercase">TAKDIR MENANTIMU</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Siap Mengklaim Kartu Arcana Pribadimu?</h2>
+<p class="font-body-lg text-body-lg text-tertiary max-w-lg mx-auto">
+          Hanya butuh 5 menit perenungan jujur untuk membuka kartu tarot kepribadianmu dan membaca rahasia kekuatan batinmu.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto mt-space-sm">
+<a class="w-full sm:w-auto px-space-xl py-3 rounded bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_30px_rgba(242,202,80,0.6)] transition-all" data-path="perjalanan-level" href="#">
+          Mulai Ritual Tes (Gratis)
+        </a>
+<a class="w-full sm:w-auto px-space-lg py-3 rounded bg-surface-container text-tertiary-fixed hover:text-primary transition-colors font-label-lg text-label-lg" data-path="bantuan-&amp;-panduan" href="#">
+          Baca Panduan Arketipe
+        </a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/70">
+        Hasil dapat langsung disimpan sebagai kartu grafis resolusi tinggi untuk avatar sosial atau koleksi fisik.
+      </p>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest/90 backdrop-blur-md"><div class="w-full max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[18px]">flare</span><span class="font-body-sm text-body-sm text-on-surface-variant">Arcana MBTI © 2025. Penjelajahan Tipologi Kepribadian berbasis Kartu Occult.</span></div><div class="flex items-center gap-space-lg font-label-archetype text-label-archetype text-tertiary-fixed-dim"><a class="hover:text-primary transition-colors uppercase tracking-widest" data-path="bantuan-&amp;-panduan" href="#">Panduan Ritual</a><a class="hover:text-primary transition-colors uppercase tracking-widest" data-path="alur-arketipe" href="#">Kompensasi Arketipe</a><a class="hover:text-primary transition-colors uppercase tracking-widest" data-path="privasi" href="#">Dekret Rahasia</a></div></div></footer></body></html>

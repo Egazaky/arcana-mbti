@@ -1,0 +1,38 @@
+import type { Question } from '../types';
+
+// Each level mixes all four dimensions and both scoring directions.
+// Counts, navigation, progress and completion are derived from this data.
+export const questions: Question[] = [
+  { id: 'l1-01', levelId: 1, dimension: 'EI', direction: 'E', statement: 'Saya merasa berenergi setelah menghabiskan waktu bersama banyak orang.' },
+  { id: 'l1-02', levelId: 1, dimension: 'SN', direction: 'S', statement: 'Saat mempelajari hal baru, saya lebih terbantu oleh contoh nyata daripada gagasan abstrak.' },
+  { id: 'l1-03', levelId: 1, dimension: 'TF', direction: 'F', statement: 'Saya mempertimbangkan perasaan orang yang terlibat sebelum mengambil keputusan.' },
+  { id: 'l1-04', levelId: 1, dimension: 'JP', direction: 'J', statement: 'Saya merasa lebih tenang ketika kegiatan saya sudah memiliki rencana yang jelas.' },
+  { id: 'l1-05', levelId: 1, dimension: 'SN', direction: 'N', statement: 'Saya suka membayangkan kemungkinan baru, meskipun belum tahu cara mewujudkannya.' },
+  { id: 'l1-06', levelId: 1, dimension: 'EI', direction: 'I', statement: 'Setelah hari yang ramai, saya membutuhkan waktu sendiri untuk memulihkan energi.' },
+  { id: 'l1-07', levelId: 1, dimension: 'JP', direction: 'P', statement: 'Saya menikmati hari yang terbuka untuk kegiatan spontan.' },
+  { id: 'l1-08', levelId: 1, dimension: 'TF', direction: 'T', statement: 'Saat membandingkan pilihan, saya mengutamakan alasan yang logis dan konsisten.' },
+  { id: 'l2-01', levelId: 2, dimension: 'TF', direction: 'T', statement: 'Dalam diskusi, saya lebih mudah menilai argumen berdasarkan fakta daripada kedekatan dengan pembicaranya.' },
+  { id: 'l2-02', levelId: 2, dimension: 'JP', direction: 'P', statement: 'Saya senang menyesuaikan rencana ketika kesempatan menarik tiba-tiba muncul.' },
+  { id: 'l2-03', levelId: 2, dimension: 'EI', direction: 'E', statement: 'Saya biasanya berani memulai percakapan ketika bertemu orang baru.' },
+  { id: 'l2-04', levelId: 2, dimension: 'SN', direction: 'N', statement: 'Saya sering melihat hubungan antara ide-ide yang tampaknya tidak berkaitan.' },
+  { id: 'l2-05', levelId: 2, dimension: 'JP', direction: 'J', statement: 'Saya lebih suka menyelesaikan tugas jauh sebelum tenggat daripada menundanya.' },
+  { id: 'l2-06', levelId: 2, dimension: 'TF', direction: 'F', statement: 'Saat memberi masukan, saya mencari cara agar orang lain tetap merasa dihargai.' },
+  { id: 'l2-07', levelId: 2, dimension: 'SN', direction: 'S', statement: 'Saya cenderung memperhatikan detail praktis yang mudah terlewat oleh orang lain.' },
+  { id: 'l2-08', levelId: 2, dimension: 'EI', direction: 'I', statement: 'Saya lebih nyaman mendalami percakapan dengan satu orang daripada berbicara dalam kelompok besar.' },
+  { id: 'l3-01', levelId: 3, dimension: 'SN', direction: 'S', statement: 'Saya lebih percaya pada pengalaman yang sudah teruji ketika menghadapi masalah sehari-hari.' },
+  { id: 'l3-02', levelId: 3, dimension: 'EI', direction: 'I', statement: 'Saya biasanya memikirkan jawaban dalam hati sebelum menyampaikannya.' },
+  { id: 'l3-03', levelId: 3, dimension: 'JP', direction: 'J', statement: 'Daftar langkah yang teratur membantu saya merasa siap mengerjakan proyek.' },
+  { id: 'l3-04', levelId: 3, dimension: 'TF', direction: 'F', statement: 'Saya memikirkan dampak keputusan pada hubungan antarmanusia, bahkan ketika itu kurang efisien.' },
+  { id: 'l3-05', levelId: 3, dimension: 'EI', direction: 'E', statement: 'Bertukar pikiran secara langsung membantu saya menemukan ide yang lebih jelas.' },
+  { id: 'l3-06', levelId: 3, dimension: 'SN', direction: 'N', statement: 'Saya lebih tertarik pada gambaran besar dan arah masa depan daripada rincian saat ini.' },
+  { id: 'l3-07', levelId: 3, dimension: 'TF', direction: 'T', statement: 'Saya nyaman menyampaikan kritik yang beralasan meskipun mungkin menimbulkan perbedaan pendapat.' },
+  { id: 'l3-08', levelId: 3, dimension: 'JP', direction: 'P', statement: 'Saya suka mencoba beberapa pendekatan sebelum memutuskan satu cara kerja.' },
+  { id: 'l4-01', levelId: 4, dimension: 'JP', direction: 'P', statement: 'Saya lebih menikmati perjalanan yang menyisakan ruang untuk kejutan daripada jadwal yang sangat terperinci.' },
+  { id: 'l4-02', levelId: 4, dimension: 'TF', direction: 'T', statement: 'Dalam situasi sulit, saya terbantu dengan memisahkan fakta dari reaksi emosional terlebih dahulu.' },
+  { id: 'l4-03', levelId: 4, dimension: 'SN', direction: 'N', statement: 'Saya senang membahas makna di balik sebuah cerita, bukan hanya peristiwa yang terjadi.' },
+  { id: 'l4-04', levelId: 4, dimension: 'EI', direction: 'I', statement: 'Saya menikmati kegiatan mandiri yang memberi ruang untuk berkonsentrasi tanpa banyak interupsi.' },
+  { id: 'l4-05', levelId: 4, dimension: 'TF', direction: 'F', statement: 'Nilai pribadi dan kepedulian pada orang lain menjadi pertimbangan utama dalam pilihan saya.' },
+  { id: 'l4-06', levelId: 4, dimension: 'JP', direction: 'J', statement: 'Saya lebih nyaman setelah suatu keputusan ditetapkan daripada membiarkan banyak pilihan tetap terbuka.' },
+  { id: 'l4-07', levelId: 4, dimension: 'EI', direction: 'E', statement: 'Saya cenderung mencari teman untuk berbagi pengalaman ketika menemukan sesuatu yang menarik.' },
+  { id: 'l4-08', levelId: 4, dimension: 'SN', direction: 'S', statement: 'Instruksi yang konkret dan berurutan membantu saya bekerja lebih baik.' },
+];
