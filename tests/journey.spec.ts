@@ -4,6 +4,7 @@ import { questions } from '../src/data/questions';
 const storageKey = 'arcana-mbti:progress';
 const levelQuestions = (level: number) => questions.filter(q => q.levelId === level);
 async function noOverflow(page: Page) { expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); }
+const group = (page: Page, question: { statement: string }) => page.getByRole('radiogroup', { name: `“${question.statement}”`, exact: true });
 
 test('complete journey, persistence, revision, collection and confirmed reset', async ({ page }) => {
   const runtimeErrors: string[] = [];
@@ -15,24 +16,20 @@ test('complete journey, persistence, revision, collection and confirmed reset', 
   await expect(page.getByRole('button', { name: /Selesaikan Level/ })).toHaveCount(3);
   for (const route of ['/test/2', '/test/0', '/test/nope', '/result']) { await page.goto(route); await expect(page).toHaveURL(/\/levels$/); }
   await page.getByRole('link', { name: 'Mainkan Level' }).click();
-  await expect(page.locator('#question-statement')).toHaveCount(1);
-  await expect(page.getByRole('button', { name: 'Lanjut', exact: true })).toBeDisabled();
-  await page.getByRole('radio', { name: '3 — Netral', exact: true }).click();
+  const level1 = levelQuestions(1);
+  await expect(page.getByTestId('question-item')).toHaveCount(level1.length);
+  await expect(page.getByRole('button', { name: 'Selesaikan Level', exact: true })).toBeDisabled();
+  await group(page, level1[0]).getByRole('radio', { name: '3 — Netral', exact: true }).click();
   await page.reload();
-  await expect(page.getByRole('radio', { name: '3 — Netral', exact: true })).toBeChecked();
-  await page.getByRole('button', { name: 'Lanjut', exact: true }).click();
-  await page.getByRole('button', { name: 'Sebelumnya', exact: true }).click();
-  await expect(page.getByRole('radio', { name: '3 — Netral', exact: true })).toBeChecked();
-  await page.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true }).click();
-  await expect(page.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
-  await page.getByRole('radio', { name: '3 — Netral', exact: true }).click();
+  await expect(group(page, level1[0]).getByRole('radio', { name: '3 — Netral', exact: true })).toBeChecked();
+  await group(page, level1[0]).getByRole('radio', { name: '5 — Sangat Sesuai', exact: true }).click();
+  await expect(group(page, level1[0]).getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
+  await group(page, level1[0]).getByRole('radio', { name: '3 — Netral', exact: true }).click();
   for (let level = 1; level <= 4; level++) {
     const bank = levelQuestions(level);
-    for (let i = 0; i < bank.length; i++) {
-      await expect(page.locator('#question-statement')).toHaveText(`“${bank[i].statement}”`);
-      await page.getByRole('radio', { name: '3 — Netral', exact: true }).click();
-      await page.getByRole('button', { name: i === bank.length - 1 ? 'Selesaikan Level' : 'Lanjut', exact: true }).click();
-    }
+    await expect(page.getByTestId('question-item')).toHaveCount(bank.length);
+    for (const question of bank) await group(page, question).getByRole('radio', { name: '3 — Netral', exact: true }).click();
+    await page.getByRole('button', { name: 'Selesaikan Level', exact: true }).click();
     await expect(page.getByRole('dialog')).toBeVisible();
     await expect(page.getByRole('heading', { name: `Level ${level} Selesai!` })).toBeVisible();
     if (level < 4) {
@@ -58,8 +55,8 @@ test('complete journey, persistence, revision, collection and confirmed reset', 
   await page.keyboard.press('Escape'); await expect(page.getByRole('dialog')).toHaveCount(0);
   await page.getByRole('link', { name: 'Kartu Saya' }).click();
   await expect(page.getByRole('heading', { name: 'Sang Komandan (ENTJ)' })).toBeVisible();
-  await page.goto('/test/1?q=1');
-  await page.getByRole('radio', { name: '1 — Sangat Tidak Sesuai', exact: true }).click();
+  await page.goto('/test/1?page=1');
+  await group(page, levelQuestions(1)[0]).getByRole('radio', { name: '1 — Sangat Tidak Sesuai', exact: true }).click();
   await page.getByRole('link', { name: 'Kartu Saya' }).click();
   await expect(page.getByRole('heading', { name: 'Sang Arsitek (INTJ)' })).toBeVisible();
   await expect(page.getByTestId('score-EI')).toContainText('44%');
@@ -87,23 +84,24 @@ test('malformed storage and unknown routes fail safely', async ({ page }) => {
   await page.goto('/test/99'); await expect(page).toHaveURL(/\/levels$/);
 });
 
-test('keyboard answers, browser history and responsive layouts', async ({ page }) => {
+test('keyboard answers, persistence and responsive layouts', async ({ page }) => {
   await page.goto('/test/1');
-  const first = page.getByRole('radio', { name: '1 — Sangat Tidak Sesuai', exact: true });
+  await expect(page).toHaveURL(/page=1/);
+  const scale = group(page, levelQuestions(1)[0]);
+  const first = scale.getByRole('radio', { name: '1 — Sangat Tidak Sesuai', exact: true });
   await first.focus(); await page.keyboard.press('ArrowRight');
-  await expect(page.getByRole('radio', { name: '2 — Tidak Sesuai', exact: true })).toBeChecked();
+  await expect(scale.getByRole('radio', { name: '2 — Tidak Sesuai', exact: true })).toBeChecked();
   await page.keyboard.press('End');
-  await expect(page.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
-  await page.getByRole('button', { name: 'Lanjut', exact: true }).click();
-  await page.goBack(); await expect(first).toBeVisible();
-  await expect(page.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
-  await page.goForward(); await expect(page).toHaveURL(/q=2/);
+  await expect(scale.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
+  await expect(group(page, levelQuestions(1)[1]).getByRole('radio', { checked: true })).toHaveCount(0);
+  await page.reload();
+  await expect(scale.getByRole('radio', { name: '5 — Sangat Sesuai', exact: true })).toBeChecked();
   for (const width of [320, 375, 768, 1280]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const route of ['/', '/levels', '/test/1?q=1', '/cards', '/cards/INTJ']) {
+    for (const route of ['/', '/levels', '/test/1?page=1', '/cards', '/cards/INTJ']) {
       await page.goto(route); await noOverflow(page);
-      if (route === '/test/1?q=1') {
-        const radios = page.getByRole('radio'); await expect(radios).toHaveCount(5);
+      if (route === '/test/1?page=1') {
+        const radios = page.getByRole('radio'); await expect(radios).toHaveCount(levelQuestions(1).length * 5);
         for (const radio of await radios.all()) expect((await radio.boundingBox())!.width).toBeGreaterThanOrEqual(44);
       }
     }
@@ -128,7 +126,7 @@ test('result responsive layout, asset integrity and reduced motion', async ({ pa
   }
   for (const [width, device] of [[1280, 'desktop'], [375, 'mobile']] as const) {
     await page.setViewportSize({ width, height: 900 });
-    for (const [name, route] of [['landing', '/'], ['levels', '/levels'], ['question', '/test/1?q=1'], ['collection', '/cards']]) {
+    for (const [name, route] of [['landing', '/'], ['levels', '/levels'], ['question', '/test/1?page=1'], ['collection', '/cards']]) {
       await page.goto(route); await page.screenshot({ path: `test-results/${name}-${device}.png`, fullPage: true });
     }
   }
@@ -137,6 +135,8 @@ test('result responsive layout, asset integrity and reduced motion', async ({ pa
 test('blocked storage remains playable with clear feedback', async ({ page }) => {
   await page.addInitScript(() => { Object.defineProperty(window, 'localStorage', { get: () => { throw new DOMException('Storage blocked', 'SecurityError'); } }); });
   await page.goto('/test/1'); await expect(page.getByRole('status')).toContainText('Penyimpanan browser tidak tersedia');
-  await page.getByRole('radio', { name: '3 — Netral', exact: true }).click();
-  await expect(page.getByRole('button', { name: 'Lanjut', exact: true })).toBeEnabled();
+  const scale = group(page, levelQuestions(1)[0]);
+  await scale.getByRole('radio', { name: '3 — Netral', exact: true }).click();
+  await expect(scale.getByRole('radio', { name: '3 — Netral', exact: true })).toBeChecked();
+  await expect(page.getByTestId('question-item').first()).toContainText('Terjawab');
 });

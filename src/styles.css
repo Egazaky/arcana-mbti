@@ -226,6 +226,19 @@ nav a.active { background: var(--gold-deep); color: #241a00; box-shadow: 0 0 12p
 .selection-hint { display: flex; align-items: center; gap: 8px; font-size: 10px; margin: 20px 0 25px; padding: 9px 12px; background: var(--deep); }.selection-hint .icon { color: var(--gold); width: 15px; height: 15px; }
 .question-navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; }.question-navigation .text-link { color: var(--muted); font-size: 10px; }
 .question-quote { font-style: italic; text-align: center; color: var(--subtle); font-size: 11px; margin-top: 28px; }
+.question-list-intro { max-width: 760px; margin: 30px auto 18px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }.question-list-intro p { color: var(--muted); font-size: 13px; margin: 0; }
+.question-list { list-style: none; padding: 0; margin: 0 auto; max-width: 760px; display: flex; flex-direction: column; gap: 16px; }
+.question-item { position: relative; background: #0f0e0d; border: 1px solid #2b2a28; border-left: 3px solid #2b2a28; border-radius: 5px; padding: 18px 22px 20px; scroll-margin: 90px; transition: border-color .22s, background .22s; }
+.question-item.answered { border-left-color: var(--gold); background: #13120f; }
+.question-item-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.question-item-done { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; letter-spacing: .06em; color: var(--gold); text-transform: uppercase; }.question-item-done .icon { width: 13px; height: 13px; }
+.question-statement { font-size: 18px; line-height: 1.45; color: #e8dec8; margin: 12px 0 16px; text-align: center; }
+.answer-fieldset.compact .answer-scale { gap: 12px; max-width: 520px; margin-inline: auto; }
+.answer-fieldset.compact .answer-art { max-width: 72px; }
+.answer-fieldset.compact .answer-card:hover, .answer-fieldset.compact .answer-card.selected { transform: translateY(-3px); }
+.answer-fieldset.compact .answer-label { font-size: 9px; padding-top: 8px; max-width: 90px; }
+.answer-fieldset.compact .selected-tick { width: 18px; height: 18px; top: -6px; right: -6px; }.answer-fieldset.compact .selected-tick .icon { width: 13px; height: 13px; }
+@media (max-width: 600px) { .question-list-intro { margin: 22px auto 14px; }.question-list-intro p { font-size: 11px; }.question-list { gap: 12px; }.question-item { padding: 14px 12px 16px; }.question-statement { font-size: 15px; margin: 10px 0 12px; }.answer-fieldset.compact .answer-scale { gap: 6px; }.answer-fieldset.compact .answer-label { font-size: 7px; } }
 .modal { color: #e6e1df; border: 1px solid #d4af3770; border-radius: 5px; background: #1d1b1a; padding: 0; margin: auto; width: min(520px, calc(100% - 32px)); max-height: calc(100dvh - 48px); box-shadow: 0 30px 100px #000b; }.modal[open]:not(.is-closing) { animation: modal-enter .18s ease-out; }
 .modal[open]:not(.is-closing)::backdrop { animation: modal-backdrop-enter .18s ease-out; }
 .modal[open].is-closing { animation: modal-exit .16s ease-in forwards; pointer-events: none; }
